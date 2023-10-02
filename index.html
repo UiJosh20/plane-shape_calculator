@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metrics</title>
+  <style>
+    main{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px 70px;
+    }
+
+    input{
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      width: 300px;
+
+    }
+    button{
+      background-color: black;
+      color: white;
+      padding: 10px;
+      width: 150px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    .box{
+      color: white;
+      background-color: rgb(219, 58, 8);
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .box1{
+      color: white;
+      background-color: rgb(7, 107, 173);
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .box2{
+      color: white;
+      background-color: rgb(7, 173, 118);
+      padding: 30px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+  <!-- Calculates the area of triangle -->
+  <div class="box">
+    <h1>Area of triangle</h1>
+    <div>
+      <input type="number" placeholder="Enter Base value" id="baseValue">
+      <input type="number" placeholder="Enter Height value" id="heightValue">
+      <button onclick="areaOfTriangle()">Calculate</button>
+    </div>
+  </div>
+
+  <!-- area of a square -->
+  <div class="box1">
+    <h1>Area of a square</h1>
+    <div>
+      <input type="number" placeholder="Enter value" id="squareValue">
+      <button onclick="areaOfSquare()">Calculate</button>
+    </div>
+  </div>
+
+<!-- Area of a circle -->
+  <div class="box2">
+    <h1>Area of a Circle</h1>
+    <div>
+      <input type="number" placeholder="Enter radius value" id="rad">
+      <button onclick="areaOfCircle()">Calculate</button>
+    </div>
+  </div>
+
+  <div class="box2">
+    <h1>Area of a Quadrilateral</h1>
+    <div>
+      <input type="number" placeholder="Enter Base value" id="baseVal">
+      <input type="number" placeholder="Enter Height value" id="heightVal">
+      <button onclick="areaOfQuad()">Calculate</button>
+    </div>
+  </div>
+
+  <div class="box1">
+    <h1>Area of a Rhombus</h1>
+    <div>
+      <input type="number" placeholder="Enter Base value" id="baseRomb">
+      <input type="number" placeholder="Enter Height value" id="heightRomb">
+      <button onclick="areaOfRhombus()">Calculate</button>
+    </div>
+  </div>
+
+  <div class="box">
+    <h1>Area of a Trapezium</h1>
+    <div>
+      <input type="number" placeholder="Enter the first Base value" id="baseTrape1">
+      <input type="number" placeholder="Enter the second Base value" id="baseTrape2">
+      <input type="number" placeholder="Enter Height value" id="heightTrape">
+      <button onclick="areaOfTrapezium()">Calculate</button>
+    </div>
+  </div>
+
+  <div class="box2">
+    <h1>Area of a Parallelogram</h1>
+    <div>
+      <input type="number" placeholder="Enter Base value" id="basePara">
+      <input type="number" placeholder="Enter Height value" id="heightPara">
+      <button onclick="areaOfParallelogram()">Calculate</button>
+    </div>
+  </div>
+
+  <div class="box1">
+    <h1>Body mass index</h1>
+    <div>
+      <input type="number" placeholder="Weight (kg)" id="weightBM">
+      <input type="number" placeholder="Height (m)" id="heightBM">
+      <button onclick="massIndex()">Calculate</button>
+    </div>
+  </div>
+  
+  <script>
+    
+    function areaOfTriangle(){
+      var baseNumber = Number(baseValue.value);
+      var heightNumber = Number(heightValue.value);
+      var triangleArea = 1 / 2 * baseNumber * heightNumber;
+      alert("Area of the triangle is " + triangleArea);
+    }
+
+    function areaOfSquare(){
+      var squareNumber = Number(squareValue.value);
+      var squareArea = squareNumber**2
+      alert("Area of the square is " + squareArea);
+    }
+
+    function areaOfCircle(){
+      var radNumber = Number(rad.value);
+      var pi = 22 / 7;
+      var circleArea = pi * radNumber**2;
+      alert("Area of the circle is " + circleArea);
+    }
+
+    function areaOfQuad(){
+      var baseNumber = Number(baseVal.value);
+      var heightNumber = Number(heightVal.value);
+      var QuadArea = baseNumber * heightNumber;
+      alert("Area of the Quadrilateral is " + QuadArea);
+    }
+
+    function areaOfRhombus(){
+      var baseNumber = Number(baseRomb.value);
+      var heightNumber = Number(heightRomb.value);
+      var RhombusArea = baseNumber * heightNumber;
+      alert("Area of the Rhombus is " + RhombusArea);
+    }
+
+    function areaOfTrapezium(){
+      var baseNumber1 = Number(baseTrape1.value);
+      var baseNumber2 = Number(baseTrape2.value);
+      var heightNumber = Number(heightTrape.value);
+      var half = (baseNumber1 + baseNumber2) / 2;
+      var trapeziumArea = half * heightNumber;
+      alert("Area of the Trapezium is " + trapeziumArea);
+    }
+
+    function areaOfParallelogram(){
+      var baseNumber = Number(basePara.value);
+      var heightNumber = Number(heightPara.value);
+      var parallelogramArea = baseNumber * heightNumber;
+      alert("Area of the parallelogram is " + parallelogramArea);
+    }
+
+    function massIndex(){
+      var weightNumber = Number(weightBM.value);
+      var heightNumber = Number(heightBM.value);
+      var BodyMassIndex = weightNumber / heightNumber;
+      alert("the body mass index is " + BodyMassIndex);
+    }
+  </script>
+  </main>
+</body>
+</html>
